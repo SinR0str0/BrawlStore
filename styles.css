@@ -1,3 +1,13 @@
+:root {
+    --primary-color: #131921;
+    --secondary-color: #232f3e;
+    --accent-color: #febd69;
+    --background-color: #eaeded;
+    --text-color: #0f1111;
+    --link-color: #007185;
+    --link-hover-color: #c7511f;
+}
+
 /* ========================================
    RESET Y ESTILOS BASE
    ======================================== */
@@ -9,7 +19,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #eaeded;
+    background-color: var(--background-color);
     line-height: 1.4;
 }
 
@@ -42,7 +52,7 @@ ul {
 
 /* Barra principal del header */
 .header-main {
-    background-color: #131921;
+    background-color: var(--primary-color);
     padding: 10px 0;
 }
 
@@ -58,14 +68,14 @@ ul {
 
 /* Logo */
 .logo a {
-    color: #ffffff;
+    color: #ccc;
     font-size: 24px;
     font-weight: bold;
     white-space: nowrap;
 }
 
 .logo a:hover {
-    color: #febd69;
+    color: var(--accent-color);
 }
 
 /* Barra de búsqueda */
@@ -86,7 +96,7 @@ ul {
 }
 
 .search-bar .search-btn {
-    background-color: #febd69;
+    background-color: var(--accent-color);
     border: none;
     padding: 0 15px;
     cursor: pointer;
@@ -95,7 +105,7 @@ ul {
 }
 
 .search-bar .search-btn:hover {
-    background-color: #f3a847;
+    background-color: var(--link-hover-color);
 }
 
 /* Enlaces de navegación */
@@ -154,12 +164,12 @@ ul {
 
 .cart-count {
     font-size: 12px;
-    color: #febd69;
+    color: var(--accent-color);
 }
 
 /* Sub-navegación */
 .header-sub {
-    background-color: #232f3e;
+    background-color: var(--secondary-color);
     padding: 8px 0;
 }
 
@@ -195,7 +205,7 @@ ul {
 
 .section-title {
     font-size: 24px;
-    color: #0f1111;
+    color: var(--text-color);
     margin-bottom: 20px;
     padding-left: 5px;
 }
@@ -228,7 +238,7 @@ ul {
 .product-image {
     width: 100%;
     height: 200px;
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
     border-radius: 4px;
     margin-bottom: 15px;
     display: flex;
