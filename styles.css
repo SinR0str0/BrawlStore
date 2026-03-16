@@ -1,184 +1,276 @@
-:root {
-    --primary-color: #131921;
-    --secondary-color: #232f3e;
-    --accent-color: #febd69;
-    --background-color: #eaeded;
-    --text-color: #0f1111;
-    --link-color: #007185;
-    --link-hover-color: #c7511f;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ========================================
-   RESET Y ESTILOS BASE
-   ======================================== */
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .shop-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 30px;
-        }
-        
-        .cards-section {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .card-row {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 15px;
-        }
-        
-        .card {
-            background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%);
-            border-radius: 12px;
-            padding: 10px;
-            text-align: center;
-            color: white;
-            border: 3px solid #34495e;
-            transition: transform 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .card.offer {
-            background: linear-gradient(180deg, #e74c3c 0%, #c0392b 100%);
-            border-color: #e74c3c;
-        }
-        
-        .timer {
-            background: rgba(0,0,0,0.6);
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-size: 11px;
-            margin-bottom: 8px;
-            display: inline-block;
-        }
-        
-        .card-image {
-            width: 100%;
-            height: 120px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 8px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-        }
-        
-        .offer .card-image {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-        
-        .card-title {
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            min-height: 30px;
-        }
-        
-        .price {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            font-weight: bold;
-            font-size: 14px;
-        }
-        
-        .currency {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-        }
-        
-        .coin { background: #f1c40f; color: #000; }
-        .gem { background: #9b59b6; color: #fff; }
-        .star { background: #e74c3c; color: #fff; }
-        
-        .free {
-            background: #27ae60;
-            padding: 5px 15px;
-            border-radius: 6px;
-            font-weight: bold;
-            display: inline-block;
-        }
-        
-        .paid {
-            background: #f39c12;
-            padding: 5px 15px;
-            border-radius: 6px;
-            font-weight: bold;
-            display: inline-block;
-            color: #000;
-        }
-        
-        .arrow-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        
-        .arrow {
-            width: 200px;
-            height: 150px;
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            clip-path: polygon(0 50%, 60% 50%, 60% 20%, 100% 50%, 60% 80%, 60% 50%, 0 50%);
-            transform: rotate(-15deg);
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.5);
-        }
-        
-        .silhouette {
-            width: 150px;
-            height: 200px;
-            background: linear-gradient(180deg, #1e3c72 0%, #0a1628 100%);
-            border-radius: 20px;
-            position: relative;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-        }
-        
-        .silhouette::before {
-            content: '?';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 80px;
-            color: #3498db;
-            font-weight: bold;
-        }
-        
-        .items-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 5px;
-            margin: 10px 0;
-            font-size: 20px;
-        }
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    --color-bg-gradient-start: #1e88e5;
+    --color-bg-gradient-mid: #42a5f5;
+    --color-bg-gradient-end: #64b5f6;
+
+    --color-header-bg: rgba(0, 0, 0, 0.3);
+    --color-input-bg: rgba(255, 255, 255, 0.9);
+
+    --color-button-bg: #ff6b6b;
+    --color-button-bg-hover: #ff5252;
+
+    --color-card-bg-start: #5c6bc0;
+    --color-card-bg-end: #3949ab;
+    --color-card-border: #283593;
+    --color-card-shadow: rgba(0, 0, 0, 0.2);
+    --color-card-shadow-hover: rgba(0, 0, 0, 0.3);
+
+    --color-offer-bg-start: #ef5350;
+    --color-offer-bg-end: #e53935;
+    --color-offer-border: #c62828;
+
+    --color-overlay: rgba(0, 0, 0, 0.6);
+    --color-overlay-light: rgba(0, 0, 0, 0.4);
+
+    --color-content-bg: rgba(255, 255, 255, 0.1);
+    --color-title-shadow: rgba(0, 0, 0, 0.5);
+
+    --color-coin-start: #f1c40f;
+    --color-coin-end: #f39c12;
+
+    --color-gem-start: #9b59b6;
+    --color-gem-end: #8e44ad;
+
+    --color-star-start: #e74c3c;
+    --color-star-end: #c0392b;
+
+    --color-free-start: #27ae60;
+    --color-free-end: #229954;
+
+    --color-paid-start: #f39c12;
+    --color-paid-end: #e67e22;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--color-bg-gradient-start) 0%, var(--color-bg-gradient-mid) 50%, var(--color-bg-gradient-end) 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.header-main {
+    background: var(--color-header-bg);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header-main h1 {
+    color: var(--color-white);
+    font-size: 28px;
+    text-shadow: 2px 2px 4px var(--color-overlay);
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 300px;
+    background: var(--color-input-bg);
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background: var(--color-button-bg);
+    color: var(--color-white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background: var(--color-button-bg-hover);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background: linear-gradient(180deg, var(--color-card-bg-start) 0%, var(--color-card-bg-end) 100%);
+    border-radius: 12px;
+    padding: 12px;
+    border: 3px solid var(--color-card-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px var(--color-card-shadow);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--color-card-shadow-hover);
+}
+
+.product-card.offer {
+    background: linear-gradient(180deg, var(--color-offer-bg-start) 0%, var(--color-offer-bg-end) 100%);
+    border-color: var(--color-offer-border);
+}
+
+.timer {
+    background: var(--color-overlay);
+    color: var(--color-white);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    align-self: center;
+    text-transform: uppercase;
+}
+
+.card-content {
+    flex: 1;
+    background: var(--color-content-bg);
+    border-radius: 8px;
+    margin: 10px 0;
+    min-height: 150px;
+}
+
+.card-title {
+    color: var(--color-white);
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 2px var(--color-title-shadow);
+}
+
+.price {
+    background: var(--color-overlay-light);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: bold;
+    color: var(--color-white);
+    font-size: 16px;
+}
+
+.currency {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.coin {
+    background: linear-gradient(135deg, var(--color-coin-start) 0%, var(--color-coin-end) 100%);
+    color: var(--color-black);
+    box-shadow: 0 2px 5px var(--color-card-shadow-hover);
+}
+
+.gem {
+    background: linear-gradient(135deg, var(--color-gem-start) 0%, var(--color-gem-end) 100%);
+    color: var(--color-white);
+    box-shadow: 0 2px 5px var(--color-card-shadow-hover);
+}
+
+.star {
+    background: linear-gradient(135deg, var(--color-star-start) 0%, var(--color-star-end) 100%);
+    color: var(--color-white);
+    box-shadow: 0 2px 5px var(--color-card-shadow-hover);
+}
+
+.free {
+    background: linear-gradient(135deg, var(--color-free-start) 0%, var(--color-free-end) 100%);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    margin-top: auto;
+    box-shadow: 0 3px 10px var(--color-card-shadow-hover);
+}
+
+.paid {
+    background: linear-gradient(135deg, var(--color-paid-start) 0%, var(--color-paid-end) 100%);
+    color: var(--color-black);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    margin-top: auto;
+    box-shadow: 0 3px 10px var(--color-card-shadow-hover);
+}
+
+footer {
+    background: var(--color-overlay-light);
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .header-main {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .search-bar {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .search-bar input {
+        width: 100%;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px;
+    }
+    
+    .product-card {
+        height: 280px;
+    }
+}
