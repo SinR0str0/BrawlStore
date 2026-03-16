@@ -199,19 +199,19 @@ body {
 }
 
 .coin {
-    background: linear-gradient(135deg, var(--color-coin-start) 0%, var(--color-coin-end) 100%);
+    background-image: url("https://static.wikia.nocookie.net/brawlstars/images/1/1a/Icon-Coin.png/revision/latest/scale-to-width-down/25?cb=20200319121417");
     color: var(--color-black);
     box-shadow: 0 2px 5px var(--color-card-shadow-hover);
 }
 
 .gem {
-    background: linear-gradient(135deg, var(--color-gem-start) 0%, var(--color-gem-end) 100%);
+    background-image: url('https://static.wikia.nocookie.net/brawlstars/images/7/7d/Icon-Gem.png/revision/latest/scale-to-width-down/25?cb=20200304145658');
     color: var(--color-white);
     box-shadow: 0 2px 5px var(--color-card-shadow-hover);
 }
 
 .star {
-    background: linear-gradient(135deg, var(--color-star-start) 0%, var(--color-star-end) 100%);
+    background-image: url("https://static.wikia.nocookie.net/brawlstars/images/1/12/Icon-Bling.png/revision/latest/scale-to-width-down/26?cb=20230427102724");
     color: var(--color-white);
     box-shadow: 0 2px 5px var(--color-card-shadow-hover);
 }
